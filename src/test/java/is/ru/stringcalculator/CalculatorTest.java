@@ -7,6 +7,6 @@ public class CalculatorTest {
 
 	@Test
 	public void testEmptyString() {
-		assertEquals(0, Calculotor.add(""));
+		assertEquals(0, Calculator.add(""));
 	}
 }
