@@ -1,4 +1,4 @@
-package is.ru.Stringcalculator; 
+package is.ru.StringCalculator; 
 
 public class Calculator {
 
