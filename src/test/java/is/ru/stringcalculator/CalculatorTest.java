@@ -14,4 +14,3 @@ public class CalculatorTest {
 	public void testOneNumber() {
 		assertEquals(1, Calculator.add(""));
 	}
-}
