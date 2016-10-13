@@ -36,5 +36,28 @@ public class CalculatorTest {
     	assertEquals(6, Calculator.add("1\n2,3"));
     }
 
+     @Test
+	public final void testIfNegative() {
+		Exception exception = null;
+		try {
+			Calculator.add("-1,2");
+		} catch (Exception e) {
+			exception = e;
+		}
+	}
+
+	@Test
+	public final void testIfManyNegatives() {
+		Exception exception = null;
+		try {
+			Calculator.add("3,-5,6,-9");
+		} catch (Exception e) {
+			exception = e;
+		}
+	}
+
+
 
 }
+
+	
