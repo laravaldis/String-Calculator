@@ -48,7 +48,7 @@ public class Calculator {
 		return total;
 	}
 
-	public static int add(String text){
+	/*public static int add(String text){
 		if(text.equals("")){
 			return 0;
 		}
@@ -73,5 +73,12 @@ public class Calculator {
 	    	numbers = numbers.replace("\n", delimiter);
 	    }
 	    return numbers.split(delimiter);
-	}
+	}*/
+
+
 }
+
+
+
+
+
