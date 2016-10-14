@@ -61,8 +61,10 @@ public class CalculatorTest {
     	assertEquals(2, Calculator.add("1001,2"));
     }
 
-
-
+    @Test
+	public final void testDelimiter() {
+ 		assertEquals(24, Calculator.add("//;n3;6;15"));
+	}
 }
 
 	
