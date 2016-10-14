@@ -36,35 +36,40 @@ public class CalculatorTest {
     	assertEquals(6, Calculator.add("1\n2,3"));
     }
 
-     @Test
-	public final void testIfNegative() {
-		Exception exception = null;
-		try {
-			Calculator.add("-1,2");
-		} catch (Exception e) {
-			exception = e;
-		}
-	}
+    @Test
+    public final void testIfNegative() {
+        Exception exception = null;
+        try {
+            Calculator.add("-1,2");
+        } catch (Exception e) {
+            exception = e;
+        }
+        assertEquals("Negatives not allowed: -1", exception.getMessage());
+
+    }
+
 
 	@Test
-	public final void testIfManyNegatives() {
-		Exception exception = null;
-		try {
-			Calculator.add("3,-5,6,-9");
-		} catch (Exception e) {
-			exception = e;
-		}
-	}
+    public final void testIfManyNegatives() {
+        Exception exception = null;
+        try {
+            Calculator.add("3,-5,6,-9");
+        } catch (Exception e) {
+            exception = e;
+        }
+        assertEquals("Negatives not allowed: -5,-9", exception.getMessage());
+    }
 
 	@Test
     public void BiggerThan(){
     	assertEquals(2, Calculator.add("1001,2"));
     }
 
-    /*@Test
-	public final void testDelimiter() {
- 		assertEquals(24, Calculator.add("//;n3;6;15"));
-	}*/
+    @Test
+    public final void testDelimiter() {
+        assertEquals(24, Calculator.add("//;\n3;6;15"));
+    }
+
 }
 
 	
